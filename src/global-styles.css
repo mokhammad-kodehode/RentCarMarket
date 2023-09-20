@@ -1,0 +1,13 @@
+:root {
+    --primary-bg-color:white;
+    --secondary-bg-color:#F3EFEE;
+    --primary-text-color: #172335;
+    --secondary-text-color: rgba(70, 69, 69, 1);
+    --primary-button-color: #097CB0;
+    --bolt: 500;
+    --text-shadow : -2px 2px 3px black;
+    --line_color : rgb(106, 100, 159);
+    --secondary-line-color : rgba(183, 36, 92, 0.8);
+    --btn-hover : rgb(77, 73, 112);
+    --toogle : #FEC342;
+  }

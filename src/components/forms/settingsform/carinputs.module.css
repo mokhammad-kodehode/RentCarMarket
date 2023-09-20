@@ -1,0 +1,122 @@
+
+
+.inputs_one{
+    display: flex;
+    padding: 30px;
+    gap: 2rem;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.inputs_two {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 2rem;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.formGroup {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+textarea {
+    width: 600px;
+    height: 200px;
+    border: 1px solid  #465162;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.city {
+    margin-left: 38px;
+}
+
+
+
+.price {
+    margin-left: 78px;
+    border: 1px solid  #465162;
+    border-radius: 5px;
+    width: 70px;
+    padding: 10px;
+}
+
+.image{
+   border: none;
+   width: 200px;
+}
+
+.fileInput{
+    display: none;
+}
+
+.formimage {
+       display: flex;
+    gap: 4.5rem;
+    align-items: center;
+}
+
+.fileInput_custom {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.imageIcon {
+    font-size: 62px;
+    color: var(--primary-button-color);
+}
+
+.formGroup_city {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+
+select {
+    padding: 10px;
+    border-radius: 5px;
+    align-items: center;
+    border: 1px solid  #465162;
+    width: 150px;
+}
+
+.formGroup input {
+    padding: 10px;
+    border-radius: 5px;
+    align-items: center;
+    border: 1px solid  #465162;
+    width: 150px;
+}
+
+.btn_submit {
+    height: 45px;
+    background-color: var(--primary-button-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    
+}
+
+.selectedPhotos {
+    display: flex;
+    gap: .3rem;
+}
+
+.selectedPhotosImage {
+    width: 120px;
+}

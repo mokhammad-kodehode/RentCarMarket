@@ -1,0 +1,54 @@
+.dateContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.dateContainer input {
+    flex-direction: row;
+    align-items: center;
+    padding: 0 10px;
+    width: 130px;
+    height: 55px;
+    font-size: 16px;
+    color: rgb(95, 95, 95);
+    border: none;
+    border-radius: 5px;
+    background: #E5E3E3;
+  }
+
+  .dateContainer input:focus {
+    outline: none;
+  }
+
+  .dateInput {
+    display: flex;
+    background-color:#E5E3E3;
+    align-items: center;
+    border-radius: 5px;
+    padding: 0 10px;
+  }
+  
+
+.calIcon {
+    font-size: 24px;
+    font-weight: 100;
+    color: rgb(95, 95, 95);
+    opacity: 0.8;
+    margin-bottom: 3px;
+}
+
+input::placeholder {
+    color: rgb(95, 95, 95);
+  }
+
+  .date:focus {
+    outline: none;
+  }
+
+  .label {
+    font-size: 14px;
+    color: #666;
+    }
+

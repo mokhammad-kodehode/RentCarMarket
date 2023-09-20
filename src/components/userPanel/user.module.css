@@ -1,0 +1,66 @@
+
+.userAvatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary-button-color);
+    
+}
+
+.userName{
+    color: var(--secondary-text-color);
+    padding-left: 10px;
+}
+
+
+.userIcon {
+  color: white;
+  font-size: 24px;
+}
+
+.userMenu {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+  }
+  
+
+  
+  .dropdown {
+    position: absolute;
+    top: 57px;
+    right:-30px;
+    background-color: #fff; /* Цвет фона выпадающего списка */
+    border: 1px solid #ccc; /* Граница выпадающего списка */
+    border-top: none; /* Уберите границу сверху, чтобы было похоже на выпадающее меню */
+    border-radius: 0 0 5px 5px; /* Скругление углов снизу */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень для выпадающего списка */
+    z-index: 1; 
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    padding: 15px 10px;
+    gap: 10px;
+    transition: ease-in-out 1s;
+  }
+  
+  .dropdown ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .dropdown li {
+    text-align: start;
+    white-space: nowrap;
+    cursor: pointer; /* Добавьте стиль указателя мыши при наведении на пункты списка */
+    /* Другие стили, которые вам нужны */
+  }

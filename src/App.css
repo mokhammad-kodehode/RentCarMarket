@@ -1,0 +1,24 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--primary-bg-color);
+    font-family: 'Quicksand', sans-serif;
+    z-index: -1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+/* Scale canvas with resize attribute to full size */
+
+
+/* A minimal css reset -
+Resets margins and paddings
+*/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
