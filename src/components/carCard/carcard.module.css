@@ -2,3 +2,32 @@
     color: inherit;
   text-decoration: none
 }
+
+.carImage {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.carCard {
+  display: flex;
+width: 400px;
+height: 100%;
+padding: 5px 10px;
+flex-direction: column;
+align-items: center;
+gap: 5px;
+background-color: white;
+border-radius: 5px;
+}
+
+.carName {
+  font-size: 22px;
+  padding: 3px 0;
+}
+
+.card_footer {
+  display: flex;
+  justify-content: space-between;
+}

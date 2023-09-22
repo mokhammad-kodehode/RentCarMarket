@@ -13,6 +13,7 @@ import LoginPage from "./routes/LogIn/LoginPage"
 import Footer from "./components/footer/Footer"
 import RentCarPage from "./routes/RentCar/RentCarPage"
 import ShareCarPage from "./routes/shareCar/ShareCarPage"
+import CarPage from "./routes/RentCar/carId/CarPage"
 import { UserProvider } from "./UserContext"
 
 
@@ -27,6 +28,7 @@ function App() {
           <Route path="/login" element={<LoginPage />}/>
           <Route path="/signup" element={<SignUpPage />}/>
           <Route path="/rent" element={<RentCarPage />}/>
+          <Route path="/rentcar/:carId" element={<CarPage/>} />
           <Route path="/share" element={<ShareCarPage />}/>
           </Routes>
           <Footer/>

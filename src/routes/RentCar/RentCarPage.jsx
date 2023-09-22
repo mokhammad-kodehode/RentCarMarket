@@ -27,26 +27,29 @@ function RentCarPage() {
 
       return (
         <>
-          <section className={styles.header}>
-            <h1>Rent car</h1>
-            <form className={styles.container}>
-              <SearchInput />
-              <PickUp />
-              <DropOff />
-            </form>
-          </section>
-          <section className={styles.cars}>
-            {cars.map((car) => (
-              <CarCard
-                key={car._id}
-                carId={car._id}
-                make={car.make}
-                model={car.model}
-                imageUrl={car.imageUrl}
-                price={car.price}
-              />
-            ))}
-          </section>
+        <section className={styles.container}>
+            <h1 className={styles.title}>Rent car</h1>
+            <div className={styles.header}>
+                <form className={styles.inputs}>
+                  <SearchInput />
+                  <PickUp />
+                  <DropOff />
+                </form>
+              </div>
+              <section className={styles.cars}>
+                {cars.map((car) => (
+                  <CarCard
+                    key={car._id}
+                    carId={car._id}
+                    make={car.make}
+                    model={car.model}
+                    imageUrl={car.imageUrl}
+                    price={car.price}
+                    location={car.location}
+                  />
+                ))}
+              </section>
+        </section>
         </>
       );
     }

@@ -7,8 +7,6 @@ import { FaImage } from 'react-icons/fa';
 function InputSettings() {
   const { currentUser } = useUserContext();
 
-  const postedBy = currentUser ? currentUser._id : null;
-
   const [formData, setFormData] = useState({
     make: '',
     model: '',
@@ -17,7 +15,6 @@ function InputSettings() {
     location: '',
     description: '',
     price: '',
-    postedBy: postedBy,
   });
 
   const carData = [
@@ -60,35 +57,51 @@ function InputSettings() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const formDataToSend = new FormData();
-      formDataToSend.append('make', formData.make);
-      formDataToSend.append('model', formData.model);
-      formDataToSend.append('year', formData.year);
-      formDataToSend.append('transmission', formData.transmission);
-      formDataToSend.append('location', formData.location);
-      formDataToSend.append('description', formData.description);
-      formDataToSend.append('price', formData.price);
-      formDataToSend.append('postedBy', formData.postedBy);
+      // Если есть файл изображения, отправляем его на сервер upload
+      const imageUrls = [];
   
+      // Загрузка каждой фотографии на сервер upload
       for (let i = 0; i < photos.length; i++) {
-        formDataToSend.append('image', photos[i]);
+        const photo = photos[i];
+        const imageData = new FormData();
+        imageData.append('image', photo);
+  
+        const imageResponse = await axios.post(
+          'http://localhost:3500/upload',
+          imageData
+        );
+  
+        console.log(`Image ${i + 1} uploaded`, imageResponse.data);
+        imageUrls.push(imageResponse.data.imageUrl);
       }
   
-      const response = await axios.post('http://localhost:3500/cars', formDataToSend);
+      // Добавление URL изображений к данным о машине
+      const formDataToSend = {
+        ...formData,
+        imageUrl: imageUrls, 
+        // Добавляем imageUrl к данным о машине
+      };
+  
+      // Отправляем данные о машине на сервер для создания объявления
+      const response = await axios.post('http://localhost:3500/cars', formDataToSend, {
+      headers: {
+        Authorization: `Bearer ${currentUser.accessToken}` // Используйте токен аутентификации из контекста
+      },
+    });
   
       console.log('Post added', response.data);
   
+      // Очищаем форму после успешного создания
       setFormData({
         make: '',
         model: '',
         year: '',
-        transmission: '',
+        transmission: '', // Поменял transmision на transmission
         location: '',
         description: '',
         price: '',
-        postedBy: currentUser._id,
       });
-      setPhotos([]);
+      setPhotos([]); // Сбрасываем выбранное изображение
     } catch (error) {
       console.log('Error', error);
     }
@@ -143,7 +156,7 @@ function InputSettings() {
               />
             </div>
             <div className={styles.formGroup}>
-              <label>Transmission:</label>
+              <label>transmission:</label>
               <select 
               name="transmission"
               value={formData.transmission}
@@ -203,7 +216,6 @@ function InputSettings() {
               <input
                 className={styles.fileInput}
                 type="file"
-                name="imageUrl"
                 id="fileInput"
                 accept="image/*"
                 multiple

@@ -1,0 +1,106 @@
+
+
+
+.carPhotoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    align-items: start;
+}
+
+.carFirstImage {
+    width: 850px;
+    height: 460px;
+    object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.car_photos{
+    display: flex;
+    gap: .5rem;
+    overflow: auto;
+    width: 850px;
+}
+
+.car_photos_photo {
+    width: 231px;
+    height: 163px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.galleryOverlay {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.selectedImage {
+    border-radius: 5px;
+    object-fit: contain;
+    height: 80%;
+    min-width: 1000px;
+}
+
+.galleryContainer{
+    margin-top: 100px;
+    position: relative;
+}
+
+.navigation {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 1330px;
+    top: 40%;
+    left: 15%;
+}
+
+.close {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.next{
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: white;
+    font-size: 36px;
+    cursor: pointer;
+
+}
+
+.prev {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    font-size: 36px;
+    cursor: pointer;
+}
+
+.hidden{
+    color: rgba(255, 255, 255, 0.53);
+}

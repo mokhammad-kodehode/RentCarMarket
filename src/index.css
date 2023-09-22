@@ -11,3 +11,9 @@ body {
   padding: 0;
   font-family: 'Roboto', sans-serif;
 }
+
+section {
+  max-width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+}

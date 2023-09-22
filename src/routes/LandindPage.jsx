@@ -1,6 +1,5 @@
 import React from "react";
 
-import styles from "./landing.module.css";
 import Banner from "../components/banner/Banner";
 
 
