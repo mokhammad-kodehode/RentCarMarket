@@ -36,9 +36,11 @@
 .galleryOverlay {
     position: fixed;
     display: flex;
+    flex-direction: column;
     top: 0;
     left: 0;
     justify-content: center;
+    align-items: center;
     background: rgba(0, 0, 0, 0.8);
     width: 100%;
     height: 100%;
@@ -48,34 +50,50 @@
 .selectedImage {
     border-radius: 5px;
     object-fit: contain;
-    height: 80%;
-    min-width: 1000px;
+    width: 100vw;
+    height: 70vh;
 }
 
 .galleryContainer{
-    margin-top: 100px;
     position: relative;
 }
 
-.navigation {
-    position: fixed;
+.arrows{
     display: flex;
     justify-content: space-between;
-    width: 1330px;
-    top: 40%;
-    left: 15%;
+    gap: 59rem;
+}
+
+.navigation {
+left: 15%;
+    top: 45%;
+    position: absolute;
+    display: flex;
+    justify-content:center;
 }
 
 .close {
-    position: absolute;
-    top: 1%;
-    right: 1%;
+position: absolute;
     width: 30px;
+    right: 8%;
     height: 30px;
+    top: -225px;
     border-radius: 50%;
     border: none;
     font-size: 16px;
     cursor: pointer;
+    transition: .3s;
+    opacity: 50%;
+}
+
+.close:hover {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    opacity: 100%;
 }
 
 .next{
@@ -84,9 +102,15 @@
     justify-content: center;
     align-items: center;
     background-color: transparent;
-    color: white;
-    font-size: 36px;
+    color: rgb(255, 255, 255);
+    font-size: 62px;
     cursor: pointer;
+    top: .3s;
+
+}
+
+.next:hover{
+  
 
 }
 
@@ -97,7 +121,7 @@
     align-items: center;
     background-color: transparent;
     color: rgb(255, 255, 255);
-    font-size: 36px;
+    font-size: 62px;
     cursor: pointer;
 }
 

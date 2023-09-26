@@ -60,12 +60,15 @@ export function CarPhoto(props) {
             {isPhotoListOpen && (
         <div className={styles.galleryOverlay}>
           <div className={styles.galleryContainer}>
-            <button className={styles.close} onClick={closePhotoList}>X</button>
             <div className={styles.navigation}>
+
+              <div className={styles.arrows} >
               <button className={prevButtonClass}  onClick={handlePrevClick} ><FaChevronLeft/></button>
               <button className={nextButtonClass} onClick={handleNextClick} >
               <FaChevronRight/>
               </button>
+              </div>
+              <button className={styles.close} onClick={closePhotoList}>X</button>
             </div>
             <img
               src={`${imageBaseUrl}/${imageUrl[ImageIndex]}`}

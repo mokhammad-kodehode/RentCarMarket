@@ -29,12 +29,23 @@ function CarPage() {
         <Link to="/rent"  className={styles.back} >
             <FaChevronLeft  />
         </Link>
-      <h1 className={styles.title}  >{`${carData.make} ${carData.model}`}</h1>
+        <div className={styles.head}>
+            <h1 className={styles.title}  >{`${carData.make} ${carData.model} ${carData.year}`}</h1>
+            <p>Location: {carData.location}</p>
+        </div>
       {carData.imageUrl && <CarPhoto imageUrl={carData.imageUrl} />}
       <div className={styles.description_container}>
         <h2>Description</h2>
         <p>{carData.description}</p>
-        <p>Location: {carData.location}</p>
+        <h3>Feateres</h3>
+        <table className={styles.features_container}>
+              <tbody>
+                  <tr>
+                     <th>Transmission</th>
+                     <td>{carData.transmission}</td>
+                  </tr>
+             </tbody>
+          </table>
       <p>Price: ${carData.price} /day</p>
       </div>
       {/* Другие детали машины и информация о ней */}
